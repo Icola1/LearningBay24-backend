@@ -697,7 +697,6 @@ func (f *PublicController) GetAppointments(c *gin.Context) {
 		c.IndentedJSON(http.StatusBadRequest, err.Error())
 		return
 	}
-	c.Header("Access-Control-Allow-Origin", "*")
 	c.IndentedJSON(http.StatusOK, appointments)
 }
 

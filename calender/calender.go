@@ -107,8 +107,12 @@ func (p *PublicController) GetAppointments(userId int, startDate time.Time, endD
 		}
 		*/
 
-		Appoint = append(Appoint, app)
+		if app != nil {
+			println(app)
+			Appoint = append(Appoint, app)
+		}
 	}
+
 	return Appoint, nil
 
 	//Appointments, err := models.Courses(
